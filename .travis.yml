@@ -5,9 +5,4 @@ jdk:
   - openjdk11
 
 script:
-  mvn clean
-  mvn compile
-  mvn test-compile
-  mvn dependency:copy-dependencies
-  mvn jar:jar
   mvn test
