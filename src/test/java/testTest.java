@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class testTestTest {
     static Stream<Arguments> stringIntAndListProvider() {
         return Stream.of(
-                Arguments.of(new int[]{5, 4, 2, 3}, new int[]{2, 3, 4, 5}),
+                Arguments.of(new int[]{5, 4, 2, 3}, new int[]{4, 3, 4, 5}),
                 Arguments.of(new int[]{-1, -4, -2, 0}, new int[]{-4, -2, -1, 0}),
                 Arguments.of(new int[]{0, 0, 0, 0}, new int[]{0, 0, 0, 0}),
                 Arguments.of(new int[]{-1}, new int[]{-1}),
@@ -46,7 +46,7 @@ class testTestTest {
     void Expection_IllegalArgumentException()
     {
         Exception exc = assertThrows(IllegalArgumentException.class, () -> {
-            PriorityQueue<Integer> q = new PriorityQueue<Integer>( -2);
+            PriorityQueue<Integer> q = new PriorityQueue<Integer>( 2);
         });
     }
 
